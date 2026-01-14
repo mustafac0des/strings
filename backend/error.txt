@@ -1,0 +1,6 @@
+Unhandled Rejection: TypeError: Cannot read properties of null (reading '_id')
+    at postCreate (file:///C:/Users/Mustafa%20X/Desktop/strings/backend/controllers/postController.js:5:29)
+    at Layer.handle [as handle_request] (C:\Users\Mustafa X\Desktop\strings\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Mustafa X\Desktop\strings\backend\node_modules\express\lib\router\route.js:149:13)
+    at protectRoute (file:///C:/Users/Mustafa%20X/Desktop/strings/backend/middlewares/protectRoute.js:17:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
