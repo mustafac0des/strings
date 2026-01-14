@@ -21,7 +21,9 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch("/api/users/me");
+        const res = await fetch("/api/users/me", {
+          credentials: "include",
+        });
         const data = await res.json();
         if (data._id) {
           setUser(data);

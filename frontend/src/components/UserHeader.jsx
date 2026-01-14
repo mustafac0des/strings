@@ -29,6 +29,7 @@ const UserHeader = (props) => {
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
         },
       );
 

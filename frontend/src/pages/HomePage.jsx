@@ -102,20 +102,21 @@ const HomePage = (props) => {
             maxH={"88vh"}
             css={{
               '&::-webkit-scrollbar': {
-                width: '8px',
+                width: '0px',
               },
               '&::-webkit-scrollbar-track': {
                 background: 'rgba(255, 255, 255, 0.05)',
-                borderRadius: '10px',
+                borderRadius: '0px',
               },
               '&::-webkit-scrollbar-thumb': {
                 background: 'rgba(105, 105, 105, 0.5)',
-                borderRadius: '10px',
+                borderRadius: '0px',
               },
               '&::-webkit-scrollbar-thumb:hover': {
                 background: 'rgba(105, 105, 105, 0.7)',
               },
             }}
+            overflowY="auto"
           >
             {Array.isArray(post) && post.length > 0 ? (
               post.map((postItem) =>

@@ -48,6 +48,7 @@ const AuthPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify(userInputs),
       });
 
@@ -84,6 +85,7 @@ const AuthPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify(newUserInputs),
       });
 

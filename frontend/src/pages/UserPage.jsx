@@ -37,6 +37,7 @@ const UserPage = (props) => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
       });
 
       const user = await res.json();
@@ -47,6 +48,7 @@ const UserPage = (props) => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
       });
 
       let post = await res.json();
@@ -56,6 +58,7 @@ const UserPage = (props) => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
       });
 
       let reply = await res.json();
@@ -73,6 +76,7 @@ const UserPage = (props) => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
       });
 
       const reposts = await res.json();
@@ -177,6 +181,7 @@ const UserPage = (props) => {
                   bg: "linear-gradient(135deg, #696969ff 0%, #464646ff 100%)",
                   color: "white",
                 }}
+                userData={userData}
               >
                 Reposts
               </Tab>
@@ -261,9 +266,9 @@ const UserPage = (props) => {
                           spacing={[1, 2, 3]}
                         >
                           <Stack direction="row" spacing={3} mx={2} alignItems="center">
-                            <Avatar src={props.user.picture} size={["xs", "sm"]} />
+                            <Avatar src={userData.picture} size={["xs", "sm"]} />
                             <Text fontWeight={600} color="text.tertiary" fontSize="sm">
-                              {props.user.username} reposted
+                              <Text fontSize={"larger"} textTransform={"uppercase"}>{userData.name}</Text> reposted
                             </Text>
                           </Stack>
 
