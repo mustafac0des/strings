@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import {
   Avatar,
   Box,
@@ -65,7 +64,7 @@ const PostPage = (props) => {
     if (data.status === 200) {
       showToast(data.message, "success");
       setText("");
-      window.location.reload(); // Keeping reload for reply to appear
+      window.location.reload();
     } else {
       showToast(data.message, "error");
     }
@@ -115,7 +114,7 @@ const PostPage = (props) => {
             right: 0,
             height: "3px",
             bgGradient: "linear(to-r, #696969ff, #464646ff)",
-            _dark: { bgGradient: "linear(to-r, #696969ff, #464646ff)" }, // Kept same for now, but explicit for clarity
+            _dark: { bgGradient: "linear(to-r, #696969ff, #464646ff)" },
             opacity: 0.8,
           }}
         >

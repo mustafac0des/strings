@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Avatar, Box, Button, Link, Stack, Text } from "@chakra-ui/react";
 
 import { useState } from "react";
@@ -19,7 +18,6 @@ const UserHeader = (props) => {
     if (isUpdating) return;
     setIsUpdating(true);
 
-    // Optimistic Update
     const wasFollowing = following;
     setFollowing(!wasFollowing);
 
@@ -37,7 +35,7 @@ const UserHeader = (props) => {
       const data = await res.json();
 
       if (data.status === 200) {
-        setUser(data.user); // updates currentUser state
+        setUser(data.user);
         showToast(data.message, "success");
       } else {
         setFollowing(wasFollowing);

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Icon as IconChakra } from "@chakra-ui/react";
 import {
   ArrowIcon,

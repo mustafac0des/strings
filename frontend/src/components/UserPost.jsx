@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { Avatar, Box, Divider, Image, Stack, Text } from "@chakra-ui/react";
 

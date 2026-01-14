@@ -39,7 +39,7 @@ const Actions = (props) => {
 
   const [liked, setLiked] = useState(props.post.likes.includes(user?._id));
   const [likesCount, setLikesCount] = useState(props.post.likes.length);
-  const [reposted, setReposted] = useState(props.post.repostedBy.includes(user?._id));
+  const [setReposted] = useState(props.post.repostedBy.includes(user?._id));
   const [repostsCount, setRepostsCount] = useState(props.post.repostedBy.length);
   const [saved, setSaved] = useState(props.post.savedBy.includes(user?._id));
   const [savedCount, setSavedCount] = useState(props.post.savedBy.length);

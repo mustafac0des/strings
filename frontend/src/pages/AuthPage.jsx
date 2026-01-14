@@ -102,7 +102,6 @@ const AuthPage = () => {
 
   return (
     <>
-      {/* Animated Strings Background */}
       <Box
         position="fixed"
         top={0}

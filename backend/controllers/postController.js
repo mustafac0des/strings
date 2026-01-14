@@ -157,7 +157,6 @@ const getLikedPosts = async (req, res) => {
       return res.status(401).json({ message: "Unauthorized" });
     }
 
-    // 1. Fetch Liked Posts
     const likedPosts = await Post.find({ likes: userId })
       .lean()
       .populate("postedBy", "username name picture");
@@ -168,7 +167,6 @@ const getLikedPosts = async (req, res) => {
       type: "post",
     }));
 
-    // 2. Fetch Liked Replies
     const postsWithLikedReplies = await Post.find({
       "replies.likes": userId,
     })
@@ -181,14 +179,13 @@ const getLikedPosts = async (req, res) => {
         if (reply.likes.includes(userId)) {
           likedReplies.push({
             ...reply,
-            postId: post._id, // Add context
+            postId: post._id, 
             type: "reply",
           });
         }
       });
     });
 
-    // 3. Combine and Sort
     const feed = [...formattedPosts, ...likedReplies].sort((a, b) => {
       return new Date(b.postedAt) - new Date(a.postedAt);
     });
@@ -212,7 +209,6 @@ const getSavedPosts = async (req, res) => {
       return res.status(401).json({ message: "Unauthorized" });
     }
 
-    // Saved posts (Note: Replies don't have savedBy field yet)
     const posts = await Post.find({ savedBy: userId })
       .lean()
       .populate("postedBy", "username name picture")

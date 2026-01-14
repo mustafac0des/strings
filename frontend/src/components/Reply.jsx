@@ -47,7 +47,7 @@ const Reply = (props) => {
 
     if (data.status === 200) {
       showToast(data.message, "success");
-      window.location.reload(); // Deleting still reloads for data consistency for now, or I can lift state
+      window.location.reload(); 
     } else {
       showToast(data.message, "error");
     }
@@ -73,7 +73,6 @@ const Reply = (props) => {
             <Stack direction={"row"}>
               <ActionButton
                 icon={"heart"}
-                // count={props.replyBy.likes.length}
                 onClick={postReplyLike}
               />
               {props.replyBy.userId._id === props.userId ? (
